@@ -1,0 +1,24 @@
+import random
+
+name = input("What's your name and surname? ")
+
+age = int(input("What is your age? "))
+agePlusFive = age + 5
+print('You will be ', agePlusFive, ' years old in 5 years.')
+
+catList = []
+while True:
+    catName = input("Enter a cat name (or press Enter to stop): ")
+    if catName == "":
+        break
+    catList.append(catName)
+
+catCount = len(catList)
+print('You listed', catCount, 'cat names.')
+
+if catCount >= 2:
+    randomCats = random.sample(catList, 2)
+    concatenatedCats = randomCats[0] + randomCats[1]
+    print('Two randomly combined names: ', concatenatedCats)
+else:
+    print('Not enough names to combine.')
